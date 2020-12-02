@@ -146,12 +146,20 @@ function App() {
             refLabelSaved.current.innerHTML = String(Number(refLabelSaved.current.innerHTML) + Number(refLabelResult.current.innerHTML));
             return;
         }
+        if (isNaN(Number(getLastElement()))) {
+            alert("Finish your expression!")
+            return;
+        }
         let result = runCalculation(arrays);
         refLabelSaved.current.innerHTML = String(Number(refLabelSaved.current.innerHTML) + result);
         arrays.length = 0;
         return arrays;
     }
     const runMMinus = (arrays:Array<string>) => {
+        if (isNaN(Number(getLastElement()))) {
+            alert("Finish your expression!")
+            return;
+        }
         if (arrays.length == 0) {
             refLabelSaved.current.innerHTML = String(Number(refLabelSaved.current.innerHTML) - Number(refLabelResult.current.innerHTML));
             return;
