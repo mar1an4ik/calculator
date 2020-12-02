@@ -5,6 +5,7 @@ margin-top: 1%;
 
 }
 button{
+ cursor: pointer;
   outline:none;
   width: 70px;
   height: 70px;
