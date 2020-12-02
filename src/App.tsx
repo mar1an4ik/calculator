@@ -188,7 +188,8 @@ function App() {
 
         if (element.target.value == "=") {
             refLabelResult.current.innerHTML = String(runCalculation(elementsOnScreen));
-            elementsOnScreen.length = 0;
+            elementsOnScreen.length = 1;
+            elementsOnScreen[0]=refLabelResult.current.innerHTML;
             return;
         }
         if (element.target.value == "m+") {
