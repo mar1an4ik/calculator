@@ -185,7 +185,7 @@ function App() {
 
 
     let buttonClick = (element:any) => {
-        if ( !refLabelResult.current.innerHTML) throw new Error("Not found")
+
         if (element.target.value == "=") {
             refLabelResult.current.innerHTML = String(runCalculation(elementsOnScreen));
             elementsOnScreen.length = 0;
