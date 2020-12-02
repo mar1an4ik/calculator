@@ -67,11 +67,15 @@ function App() {
 
     const operatorRepeat = (symbol:string) => {
 
-        if ((isNaN(Number(getLastElement())) && isNaN(Number(symbol))) || (getLastElement().slice(-1) == ".")) {
+        if ( (getLastElement().slice(-1) == ".")) {
 
             alert("You should enter the number")
 
             return 1
+        } else if (isNaN(Number(getLastElement())) && isNaN(Number(symbol))){
+            elementsOnScreen[elementsOnScreen.length-1]=symbol;
+            refLabelResult.current.innerHTML = (elementsOnScreen.join(''));
+            return 1;
         }
 
     } // checking repeating operators like cant be "3*/"
